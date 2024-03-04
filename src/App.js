@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { UseSelector, useDispatch, useSelector } from "react-redux";
+import { setStatus } from "./store/gameSlice";
+import Board from "./components/Board";
 
 function App() {
+
+  const {buttonStatus} = useSelector(store=> store.game);
+  const dispatch = useDispatch();
+
+  const clickHandler = ()=>{
+    dispatch(setStatus('Resume'))
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Board/>
+    <button className="startBtn" onClick={clickHandler}>{buttonStatus}</button>
     </div>
   );
 }

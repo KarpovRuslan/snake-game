@@ -1,20 +1,6 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  background-color: #1b1b1b;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -24,15 +10,37 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.startBtn{
+  background-color: #1b1b1b;
+  border-color: white;
+  color: white;
+  font-size: 30px;
+  padding: 5px 15px;
+  border-radius: 10px;
+  width: 150px;
+  margin-top: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.board{
+  display: grid;
+  grid-template-columns: repeat(10,1fr);
+}
+
+.square button{
+  width: 35px;
+  height: 35px;
+  background-color: #1b1b1b;
+  border-color: rgb(128, 134, 132);
+  border-radius: 10px;
+  margin: 3px;
+}
+
+.square .snake{
+  background-color: #009220;
+  border-color: #009220;
+}
+
+.square .apple{
+  background-color: red;
+  border-color: red;
 }
