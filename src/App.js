@@ -1,22 +1,23 @@
-import { UseSelector, useDispatch, useSelector } from "react-redux";
-import { setStatus } from "./store/gameSlice";
-import Board from "./components/Board";
+import { useDispatch } from 'react-redux';
+import { saveKey } from './store/gameSlice';
+import Board from './components/Board';
+import Status from './components/Status';
+import Header from './components/Header';
 
 function App() {
+	const dispatch = useDispatch();
 
-  const {buttonStatus} = useSelector(store=> store.game);
-  const dispatch = useDispatch();
+	const keyDownHandler = (event) => {
+		dispatch(saveKey(event.key));
+	};
 
-  const clickHandler = ()=>{
-    dispatch(setStatus('Resume'))
-  }
-
-  return (
-    <div className="App">
-      <Board/>
-    <button className="startBtn" onClick={clickHandler}>{buttonStatus}</button>
-    </div>
-  );
+	return (
+		<div className="App" onKeyDownCapture={keyDownHandler}>
+			<Header />
+			<Board />
+			<Status />
+		</div>
+	);
 }
 
 export default App;

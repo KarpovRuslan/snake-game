@@ -1,46 +1,46 @@
 .App {
-  text-align: center;
-  background-color: #1b1b1b;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+	text-align: center;
+	background-color: #1b1b1b;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
 }
 
-.startBtn{
-  background-color: #1b1b1b;
-  border-color: white;
-  color: white;
-  font-size: 30px;
-  padding: 5px 15px;
-  border-radius: 10px;
-  width: 150px;
-  margin-top: 20px;
+.startBtn {
+	background-color: #1b1b1b;
+	border-color: white;
+	color: white;
+	font-size: 30px;
+	padding: 5px 15px;
+	border-radius: 10px;
+	width: 150px;
+	margin-top: 20px;
 }
 
-.board{
-  display: grid;
-  grid-template-columns: repeat(10,1fr);
+.board {
+	display: grid;
+	grid-template-columns: repeat(10, 1fr);
 }
 
-.square button{
-  width: 35px;
-  height: 35px;
-  background-color: #1b1b1b;
-  border-color: rgb(128, 134, 132);
-  border-radius: 10px;
-  margin: 3px;
+.square button {
+	width: 35px;
+	height: 35px;
+	background-color: #1b1b1b;
+	border-color: rgb(128, 134, 132);
+	border-radius: 10px;
+	margin: 3px;
 }
 
-.square .snake{
-  background-color: #009220;
-  border-color: #009220;
+.square .snake {
+	background-color: #009220;
+	border-color: #009220;
 }
 
-.square .apple{
-  background-color: red;
-  border-color: red;
+.square .apple {
+	background-color: red;
+	border-color: red;
 }
